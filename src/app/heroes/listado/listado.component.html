@@ -1,0 +1,14 @@
+<div *ngIf="familiaBorrado; else noBorrado">
+    <h3>Integrante borrado : <small>{{ familiaBorrado }}</small></h3>
+</div>
+<ng-template #noBorrado><h3>Aún no se ha borrado nada</h3></ng-template>
+
+<button (click)="borrarIntegrante()">Borrar integrante</button>
+
+<p>Integrantes de la familia</p>
+<ul>
+    <li *ngFor="let familia of familias; let i= index"> {{ i+1}} - {{ familia }}</li>
+</ul>
+
+
+
